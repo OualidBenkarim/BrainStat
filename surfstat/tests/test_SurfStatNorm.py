@@ -12,7 +12,7 @@ def dummy_test(Y, mask, subdiv):
         # wrap matlab functions
         Wrapped_Y, Wrapped_Yav = sw.matlab_SurfStatNorm(Y, mask, subdiv)
     except:
-        pytest.fail("ORIGINAL MATLAB CODE DOES NOT WORK WITH THESE INPUTS...")
+        pytest.skip("Original MATLAB code does not work with these inputs.")
 
     Python_Y, Python_Yav = py_SurfStatNorm(Y, mask, subdiv)
 

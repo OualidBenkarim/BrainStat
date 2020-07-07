@@ -14,11 +14,9 @@ def dummy_test(slm, contrast):
 		Wrapped_slm = sw.matlab_SurfStatT(slm, contrast)
 		
 	except:
-		print >> sys.stderr, "ORIGINAL MATLAB CODE DOES NOT WORK WITH THESE INPUTS..."
-		sys.exit(1)
-	
+		pytest.skip("Original MATLAB code does not work with these inputs.")
+		
 	# run python functions
-
 	Python_slm = py_SurfStatT(slm, contrast)
 	
 	testout_SurfStatT = []

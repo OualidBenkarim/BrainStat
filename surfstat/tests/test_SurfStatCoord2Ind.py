@@ -13,7 +13,7 @@ def dummy_test(coord, surf):
         Wrapped_ind = sw.matlab_SurfStatCoord2Ind(coord, surf)
 
     except:
-        pytest.fail("ORIGINAL MATLAB CODE DOES NOT WORK WITH THESE INPUTS...")
+        pytest.skip("Original MATLAB code does not work with these inputs.")
 
     Python_ind = py_SurfStatCoord2Ind(coord, surf)
 

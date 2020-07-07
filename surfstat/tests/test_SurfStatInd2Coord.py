@@ -13,8 +13,8 @@ def dummy_test(A, B):
         Wrapped_coord = sw.matlab_SurfStatInd2Coord(A, B)
 
     except:
-        pytest.fail("ORIGINAL MATLAB CODE DOES NOT WORK WITH THESE INPUTS...")
-
+        pytest.skip("Original MATLAB code does not work with these inputs.")
+        
     Python_coord = py_SurfStatInd2Coord(A, B)
 
     # compare matlab-python outputs

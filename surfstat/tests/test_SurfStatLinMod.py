@@ -25,7 +25,7 @@ def dummy_test(A, B, surf):
         Wrapped_SurfStatLinMod = sw.matlab_SurfStatLinMod(Amat, Bmat, surf)
 
     except:
-        pytest.fail("ORIGINAL MATLAB CODE DOES NOT WORK WITH THESE INPUTS...")
+        pytest.skip("Original MATLAB code does not work with these inputs.")
 	
     # run python functions
     Python_SurfStatLinMod = py_SurfStatLinMod(A, B, surf)
